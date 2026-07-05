@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Background photo + darkening overlay (for text contrast) -->
+    <div class="siteBackground"></div>
+    <div class="siteOverlay"></div>
+
+    <!-- Floating Petals -->
+    <div class="petals"></div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
+
+    <!-- Fairy Lights (populated by script.js) -->
+    <div class="lights"></div>
+
+    <!-- ================================================= -->
+    <!-- SCENE 1 : BIRTHDAY CAKE -->
+    <!-- ================================================= -->
+
+    <section id="cakeScene" class="scene active">
+
+        <div class="background-glow"></div>
+
+        <div class="cake-container">
+
+            <h2 class="intro-text">
+                Someone has something special for you ❤️
+            </h2>
+
+            <!-- Cake -->
+
+            <div class="cake">
+
+                <!-- Candles -->
+
+                <div class="candles">
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                        <div class="smoke"></div>
+                    </div>
+
+                </div>
+
+                <!-- Cake Layers -->
+
+                <div class="icing"></div>
+
+                <div class="chocoDrip"></div>
+
+                <div class="layer top"></div>
+
+                <div class="layer middle"></div>
+
+                <div class="layer bottom"></div>
+
+                <div class="plate"></div>
+
+                <!-- Decorations: strawberries + chocolate, like a naked drip cake -->
+
+                <div class="decor strawberry s1">🍓</div>
+                <div class="decor strawberry s2">🍓</div>
+                <div class="decor strawberry s3">🍓</div>
+                <div class="decor strawberry s4">🍓</div>
+                <div class="decor strawberry s5">🍓</div>
+                <div class="decor chocoChunk">🍫</div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <button id="lightButton" class="mainButton">
+                🎂 Light the Candles
+            </button>
+
+            <button id="blowButton" class="mainButton hidden">
+                🎤 Blow Out The Candles
+            </button>
+
+            <!-- Blow Status -->
+
+            <div class="blowContainer hidden">
+
+                <p id="blowHint">Blow into your microphone...</p>
+
+                <div class="progress">
+
+                    <div id="progressFill"></div>
+
+                </div>
+
+                <!-- Shown automatically if mic access fails or isn't available -->
+                <button id="manualBlowButton" class="manualButton hidden">
+                    No mic? Tap here rapidly instead
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- CELEBRATION -->
+    <!-- ================================================= -->
+
+    <section id="celebrationScene" class="scene hidden">
+
+        <canvas id="confettiCanvas"></canvas>
+
+        <h2 class="celebration-text">Happy Birthday! 🎉</h2>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ENVELOPE -->
+    <!-- ================================================= -->
+
+    <section id="envelopeScene" class="scene hidden">
+
+        <div class="envelopeContainer">
+
+            <h2>
+                Open your Birthday Letter ❤️
+            </h2>
+
+            <div id="envelope" class="envelope">
+
+                <div class="flap"></div>
+
+                <div class="letter">
+
+                    <h3>Happy Birthday ❤️</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- BOOK -->
+    <!-- ================================================= -->
+
+    <section id="bookScene" class="scene hidden">
+
+        <div class="bookWrapper">
+
+        <div class="book">
+
+            <!-- Cover -->
+
+            <div class="cover">
+
+                <h1>
+                    Happy Birthday
+                </h1>
+
+            </div>
+
+            <!-- Pages -->
+            <!-- To customize: edit the text below, and replace each image's -->
+            <!-- data-src with a real path once you've added your own photo  -->
+            <!-- to the assets/ folder (see README.md for exact filenames).  -->
+
+            <div class="pages">
+
+                <!-- Page 1 -->
+
+                <div class="page active">
+
+                    <h2>Happy Birthday ❤️</h2>
+
+                    <p>
+                        Happy Birthday! 🎂❤️
+I was going to buy you a birthday cap, but apparently they don't make them in airport runway size. 😭
+Your forehead is so big it gets sunlight before the rest of your face, and Google Maps keeps mistaking it for a new state.
+Don't worry though... it just means you've got extra storage for all the overthinking. 😂
+                    </p>
+
+                </div>
+
+                <!-- Page 2 -->
+
+                <div class="page">
+
+                    <img data-src="assets/photo1.jpeg" alt="A favorite memory together">
+
+                </div>
+
+                <!-- Page 3 -->
+
+                <div class="page">
+
+                    <h2>One Thing...</h2>
+
+                    <p>
+                        Jokes aside, I'm really grateful to have you in my life. I hope this year brings you happiness, good health, success, and countless reasons to smile. 
+                        Never stop being the funny, kind, and amazing person you are. Have the best birthday ever... 
+                        and may your forehead continue to shine brighter than your future. 😂🎉❤️
+                    </p>
+
+                </div>
+
+                <!-- Page 4 -->
+
+                <div class="page">
+
+                    <img data-src="assets/photo2.png" alt="A favorite memory together">
+
+                </div>
+
+                <!-- Page 5 -->
+
+                <div class="page">
+
+                    <h2>Thank You ❤️</h2>
+
+                    <p>
+                        Thank you me for being part of your life.
+                        (jokes apart "Dhyan rkh !!")
+                    </p>
+
+                </div>
+
+                <!-- Page 6 -->
+
+                <div class="page">
+
+                    <img data-src="assets/photo3.jpg" alt="A favorite memory together">
+
+                </div>
+
+            </div>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <div class="bookControls">
+
+                <button id="prevPage" aria-label="Previous page">
+                    ◀
+                </button>
+
+                <button id="nextPage" aria-label="Next page">
+                    ▶
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- AUDIO -->
+    <!-- ================================================= -->
+
+    <audio id="birthdaySong" preload="none">
+
+        <source src="assets/birthday-song.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <audio id="popSound" preload="none">
+
+        <source src="assets/pop.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <audio id="whooshSound" preload="none">
+
+        <source src="assets/whoosh.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
